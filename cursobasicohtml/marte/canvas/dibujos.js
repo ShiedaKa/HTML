@@ -1,3 +1,7 @@
+var texto = document.getElementById("testo_lineas");
+var boton = document.getElementById("botoncito");
+boton.addEventListener("click", dibujoPorClick );
+
 var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
 var lineas = 30;
@@ -10,13 +14,13 @@ while (l < lineas)
    xf= 10 * (l + 1);
   dibujarLinea("#e11a29", 0, yi, xf, 300);
   console.log("linea" +l);
-  l = l +1;
+  l = l +0.5;
   
   yf= 10 * l;
   xi= 10 * (l + 1);
   dibujarLinea("#6fc6d7", xi, 0, 300, yf);
   console.log("linea" +l);
-  l = l +1;
+  l = l +0.5;
   
 }
 
@@ -26,11 +30,17 @@ dibujarLinea("#AFA", 299,299,299,1);
 dibujarLinea("#AFA", 299,1,1,1);
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
+    {
+        lienzo.beginPath();
+        lienzo.strokeStyle = color;
+        lienzo.moveTo(xinicial, yinicial);
+        lienzo.lineTo(xfinal, yfinal);
+        lienzo.stroke();
+        lienzo.closePath();
+    }
+
+function dibujoPorClick()
 {
-    lienzo.beginPath();
-    lienzo.strokeStyle = color;
-    lienzo.moveTo(xinicial, yinicial);
-    lienzo.lineTo(xfinal, yfinal);
-    lienzo.stroke();
-    lienzo.closePath();
+    var xxx = parseInt(texto.vaule);
+    alert("No me toques ahí")
 }
