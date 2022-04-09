@@ -41,5 +41,6 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
 
 function dibujoPorClick()
 {
-    alert("No me toques ahí")
+    texto
+    alert("No me toques ahí " + x);
 }
