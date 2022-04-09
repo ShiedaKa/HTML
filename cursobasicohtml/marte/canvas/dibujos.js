@@ -41,6 +41,5 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
 
 function dibujoPorClick()
 {
-    var xxx = parseInt(texto.vaule);
     alert("No me toques ahí")
 }
